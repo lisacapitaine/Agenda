@@ -26,11 +26,11 @@ public class FixedTerminationEventTest {
     FixedTerminationEvent fixedTermination = new FixedTerminationEvent("Fixed termination weekly", nov_1__2020_22_30, min_120, ChronoUnit.WEEKS, jan_5_2021);
 
     // A Weekly Repetitive event ending after a give number of occurrrences
-    FixedTerminationEvent fixedRepetitions = new FixedTerminationEvent("Fixed termination weekly", nov_1__2020_22_30, min_120, ChronoUnit.WEEKS, 10);
+    FixedTerminationEvent fixedRepetitions = new FixedTerminationEvent("Fixed termination weekly", nov_1__2020_22_30, min_120, ChronoUnit.WEEKS, 9);
     
     @Test
     public void canCalculateNumberOfOccurrencesFromTerminationDate() {
-        assertEquals(10, fixedTermination.getNumberOfOccurrences(), "Cet événement doits se répéter 10 fois");
+        assertEquals(9, fixedTermination.getNumberOfOccurrences(), "Cet événement doits se répéter 10 fois");
     }
 
     @Test
