@@ -6,40 +6,29 @@ import java.util.*;
 /**
  * Description : An agenda that stores events
  */
-public class Agenda {
-    private ArrayList<Event> lesEvenements;
+    public class Agenda {
+    private ArrayList <Event> e ; 
 
-    public Agenda() {
-        this.lesEvenements = new ArrayList<Event>();
-    }
-
+    public Agenda () {
+    this.e = new ArrayList <Event> (); 
+}
     /**
      * Adds an event to this agenda
      *
      * @param e the event to add
      */
-
     public void addEvent(Event e) {
-        lesEvenements.add(e);
-    }
-
-    public void removeEvent(Event e) {
-        lesEvenements.remove(e);
+        this.add(e) ; 
     }
 
     /**
      * Computes the events that occur on a given day
      *
      * @param day the day toi test
-     * @return and iteraror to the events that occur on that day
+     * @return a list of events that occur on that day
      */
     public List<Event> eventsInDay(LocalDate day) {
-        ArrayList<Event> newListEvent = new ArrayList<Event>();
-        for (Event e : lesEvenements) {
-            if (e.isInDay(day)) {
-                newListEvent.add(e);
-            }
-        }
-        return newListEvent;
+        // TODO : implémenter cette méthode
+        throw new UnsupportedOperationException("Pas encore implémenté");
     }
 }
